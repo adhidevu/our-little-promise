@@ -14,3 +14,12 @@ h1{
 p{
     font-size:1.2rem;
 }
+button{
+    padding:15px 30px;
+    font-size:18px;
+    border:none;
+    border-radius:30px;
+    background:#ff4d88;
+    color:white;
+    cursor:pointer;
+}
