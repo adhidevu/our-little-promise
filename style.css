@@ -30,3 +30,11 @@ section {
   border-radius: 10px;
   text-align: center;
 }
+h2 {
+  color: #ff4d6d;
+}
+
+p {
+  color: #555;
+  font-size: 18px;
+}
