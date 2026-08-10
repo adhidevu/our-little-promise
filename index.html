@@ -21,10 +21,16 @@ function showMessage() {
   document.getElementById("message").textContent =
     "Our journey starts here. ❤️";
 }
+    function showMemory() {
+  document.getElementById("memory-text").textContent =
+    "Some moments are small, but they stay with us forever. ❤️";
+}
 </script>
   <div class="memory-box">
   <h3>Our Memories 📸</h3>
   <p>Every little moment becomes a memory.</p>
+    <button onclick="showMemory()">View a Memory ❤️</button>
+<p id="memory-text"></p>
 </div>
 </body>
 </html>
