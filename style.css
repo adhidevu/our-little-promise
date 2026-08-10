@@ -68,3 +68,9 @@ button:hover {
 .memory-box h3 {
   color: #ff4d6d;
 }
+#memory-text {
+  margin-top: 15px;
+  color: #ff4d6d;
+  font-size: 17px;
+  font-style: italic;
+}
