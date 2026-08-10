@@ -55,5 +55,6 @@ button:hover {
   margin-top: 15px;
   font-size: 18px;
   font-weight: bold;
-  color: #ff4d6d;
+  color: #ff4d6d !important;
 }
+
