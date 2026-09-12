@@ -1,46 +1,314 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Little Promise</title>
+  <title>Our Little Promise ❤️</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <h1>Our Little Promise ❤️</h1>
-  <p>A small place for our beautiful memories.</p>
-  <button>Open Our Story❤️</button>
-  <section>
-  <h2>Our Little Promise ❤️</h2>
-  <p>A small place for our memories and moments.</p>
-   <button onclick="showMessage()">Start Our Journey</button>
-    <p id="message">Ready to start our journey? ❤️</p>
-</section>
-  <script>
-function showMessage() {
-  document.getElementById("message").textContent =
-    "Our journey starts here. ❤️";
+
+  <!-- Floating Hearts -->
+
+  <div class="hearts">
+    <span>❤️</span>
+    <span>💕</span>
+    <span>💗</span>
+    <span>💖</span>
+    <span>❤️</span>
+    <span>💕</span>
+  </div>
+
+  <!-- HERO -->
+
+  <header class="hero">
+    <p class="small-title">A little place made with love</p>
+
+```
+<h1>Our Little Promise ❤️</h1>
+
+<p class="hero-text">
+  A small place for our beautiful memories,
+  little moments and everything that makes
+  our story special.
+</p>
+
+<button onclick="openStory()">Open Our Story ❤️</button>
+```
+
+  </header>
+
+  <!-- STORY -->
+
+  <section id="story" class="section hidden">
+
+```
+<p class="section-label">OUR STORY</p>
+
+<h2>It all started with a little moment... 💕</h2>
+
+<p class="story-text">
+  Sometimes the most beautiful stories don't begin
+  with something extraordinary. They begin with a
+  simple hello, a small conversation and two people
+  slowly becoming important to each other.
+</p>
+
+<p class="story-text">
+  And somewhere between all those little conversations,
+  laughs, memories and moments, something beautiful
+  started growing.
+</p>
+
+<button onclick="startJourney()">Start Our Journey ✨</button>
+```
+
+  </section>
+
+  <!-- JOURNEY -->
+
+  <section id="journey" class="section hidden">
+
+```
+<p class="section-label">OUR JOURNEY</p>
+
+<h2>Little moments. Big memories. ❤️</h2>
+
+<div class="timeline">
+
+  <div class="timeline-card">
+    <div class="number">01</div>
+    <h3>The Beginning 🌸</h3>
+    <p>
+      The day our little story started.
+      A simple beginning that became something
+      much more meaningful.
+    </p>
+  </div>
+
+  <div class="timeline-card">
+    <div class="number">02</div>
+    <h3>Getting Closer 💕</h3>
+    <p>
+      More conversations, more laughs,
+      more little moments and slowly,
+      becoming a part of each other's everyday life.
+    </p>
+  </div>
+
+  <div class="timeline-card">
+    <div class="number">03</div>
+    <h3>The Memories 📸</h3>
+    <p>
+      The moments that seemed ordinary then,
+      but became memories worth keeping forever.
+    </p>
+  </div>
+
+  <div class="timeline-card">
+    <div class="number">04</div>
+    <h3>Still Here ❤️</h3>
+    <p>
+      Through every good day and every difficult day,
+      some people simply become too special to lose.
+    </p>
+  </div>
+
+</div>
+
+<button onclick="showMemories()">Open Our Memories 📸</button>
+```
+
+  </section>
+
+  <!-- MEMORIES -->
+
+  <section id="memories" class="section hidden">
+
+```
+<p class="section-label">OUR MEMORIES</p>
+
+<h2>Every little moment matters. ❤️</h2>
+
+<p class="subtitle">
+  Some memories are kept in photographs.
+  Some are kept quietly in our hearts.
+</p>
+
+
+<div class="memory-grid">
+
+  <div class="memory-box">
+
+    <div class="memory-icon">📸</div>
+
+    <h3>A Little Memory</h3>
+
+    <p>
+      Every little moment becomes a memory
+      when it means something to us.
+    </p>
+
+    <button onclick="showMemory()">
+      View a Memory ❤️
+    </button>
+
+    <p id="memory-text"></p>
+
+  </div>
+
+
+  <div class="memory-box">
+
+    <img
+      src="our1.jpg"
+      alt="Our Memory"
+      class="memory-image"
+    >
+
+    <h3>One More Memory 💕</h3>
+
+    <p>
+      A picture may last for years,
+      but the feeling behind it lasts even longer.
+    </p>
+
+    <button onclick="showMemory2()">
+      Open ❤️
+    </button>
+
+    <p id="memory-text-2"></p>
+
+  </div>
+
+</div>
+
+
+<button class="special-button" onclick="showPromise()">
+  One Last Thing... 💌
+</button>
+```
+
+  </section>
+
+  <!-- PROMISE -->
+
+  <section id="promise" class="promise hidden">
+
+```
+<div class="promise-card">
+
+  <div class="heart-big">❤️</div>
+
+  <p class="section-label">A LITTLE PROMISE</p>
+
+  <h2>For all the moments yet to come...</h2>
+
+  <p>
+    No matter how many days pass,
+    some memories will always remain special.
+  </p>
+
+  <p>
+    Thank you for being a beautiful part
+    of this little journey.
+  </p>
+
+  <p class="final-line">
+    Here's to more laughs,<br>
+    more memories,<br>
+    more little moments... ❤️
+  </p>
+
+  <button onclick="finalMessage()">
+    Read One Last Message 💕
+  </button>
+
+  <p id="final-message"></p>
+
+</div>
+```
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+    Made with a little bit of love ❤️
+  </footer>
+
+<script>
+
+function openStory() {
+
+  document.getElementById("story").classList.remove("hidden");
+
+  document.getElementById("story").scrollIntoView({
+    behavior: "smooth"
+  });
+
 }
-    function showMemory() {
+
+
+function startJourney() {
+
+  document.getElementById("journey").classList.remove("hidden");
+
+  document.getElementById("journey").scrollIntoView({
+    behavior: "smooth"
+  });
+
+}
+
+
+function showMemories() {
+
+  document.getElementById("memories").classList.remove("hidden");
+
+  document.getElementById("memories").scrollIntoView({
+    behavior: "smooth"
+  });
+
+}
+
+
+function showMemory() {
+
   document.getElementById("memory-text").textContent =
     "Some moments are small, but they stay with us forever. ❤️";
-    }
-      function showMemory2() {
-  document.getElementById("memory-text-2").textContent =
-    "The best memories are the ones we create together. ❤️";
+
 }
+
+
+function showMemory2() {
+
+  document.getElementById("memory-text-2").textContent =
+    "The best memories are the ones we create together. 💕";
+
+}
+
+
+function showPromise() {
+
+  document.getElementById("promise").classList.remove("hidden");
+
+  document.getElementById("promise").scrollIntoView({
+    behavior: "smooth"
+  });
+
+}
+
+
+function finalMessage() {
+
+  document.getElementById("final-message").textContent =
+    "Whatever comes next, this little story will always be something worth remembering. ❤️";
+
+}
+
 </script>
-  <div class="memory-box">
-  <h3>Our Memories 📸</h3>
-  <p>Every little moment becomes a memory.</p>
-    <button onclick="showMemory()">View a Memory ❤️</button>
-<p id="memory-text"></p>
-</div>
-  <div class="memory-box">
-  <h3>One More Memory 💕</h3>
-  <p id="memory-text-2"></p>
-    <img src="our1.jpg" alt="Our Memory" class="memory-image">
-  <button onclick="showMemory2()">Open ❤️</button>
-</div>
+
 </body>
 </html>
