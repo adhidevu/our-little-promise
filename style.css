@@ -622,3 +622,216 @@ padding: 13px 24px;
     }
 
 }
+/* =========================
+   2 YEAR ANNIVERSARY
+========================= */
+
+.anniversary-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 20px;
+    overflow: hidden;
+}
+
+.anniversary-content {
+    position: relative;
+    max-width: 700px;
+    animation: anniversaryAppear 1.5s ease forwards;
+}
+
+.anniversary-small {
+    letter-spacing: 5px;
+    font-size: 13px;
+    opacity: 0.7;
+    margin-bottom: 15px;
+}
+
+.anniversary-content h2 {
+    font-family: Georgia, serif;
+    font-size: 48px;
+    margin: 0 0 25px;
+}
+
+.year-number {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 30px;
+
+    border: 2px solid currentColor;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation: yearPulse 2.5s ease-in-out infinite;
+}
+
+.year-number span {
+    font-family: Georgia, serif;
+    font-size: 90px;
+    line-height: 1;
+    animation: numberFloat 3s ease-in-out infinite;
+}
+
+.anniversary-text {
+    font-family: Georgia, serif;
+    font-size: 19px;
+    line-height: 1.8;
+    opacity: 0.85;
+}
+
+.anniversary-line {
+    width: 120px;
+    height: 1px;
+    margin: 30px auto;
+    background: currentColor;
+    opacity: 0.4;
+
+    animation: lineGrow 2s ease forwards;
+}
+
+.anniversary-date {
+    font-size: 18px;
+    letter-spacing: 4px;
+}
+
+.anniversary-final {
+    margin-top: 35px;
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 20px;
+}
+
+
+/* FLOATING HEARTS */
+
+.anniversary-hearts span {
+    position: absolute;
+    font-size: 25px;
+    animation: floatingHeart 4s ease-in-out infinite;
+}
+
+.anniversary-hearts span:nth-child(1) {
+    left: -80px;
+    top: 80px;
+    animation-delay: 0s;
+}
+
+.anniversary-hearts span:nth-child(2) {
+    right: -90px;
+    top: 160px;
+    animation-delay: 1s;
+}
+
+.anniversary-hearts span:nth-child(3) {
+    left: -40px;
+    bottom: 50px;
+    animation-delay: 2s;
+}
+
+
+/* ANIMATIONS */
+
+@keyframes anniversaryAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(50px) scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+@keyframes yearPulse {
+
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(0,0,0,0);
+    }
+
+    50% {
+        transform: scale(1.08);
+        box-shadow: 0 0 35px rgba(255,100,130,0.25);
+    }
+
+}
+
+@keyframes numberFloat {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+}
+
+@keyframes lineGrow {
+
+    from {
+        width: 0;
+        opacity: 0;
+    }
+
+    to {
+        width: 120px;
+        opacity: 0.4;
+    }
+
+}
+
+@keyframes floatingHeart {
+
+    0%, 100% {
+        transform: translateY(0) rotate(-10deg);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: translateY(-25px) rotate(10deg);
+        opacity: 1;
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .anniversary-content h2 {
+        font-size: 36px;
+    }
+
+    .year-number {
+        width: 120px;
+        height: 120px;
+    }
+
+    .year-number span {
+        font-size: 70px;
+    }
+
+    .anniversary-text {
+        font-size: 17px;
+    }
+
+    .anniversary-hearts span:nth-child(1) {
+        left: 0;
+    }
+
+    .anniversary-hearts span:nth-child(2) {
+        right: 0;
+    }
+
+}
