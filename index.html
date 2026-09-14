@@ -231,6 +231,9 @@
   <button onclick="finalMessage()">
     Read One Last Message 💕
   </button>
+  <button onclick="document.getElementById('letter').classList.remove('hidden'); document.getElementById('letter').scrollIntoView({behavior:'smooth'});">
+    Open Our Letter 💌
+</button>
 
   <p id="final-message"></p>
 
@@ -238,6 +241,65 @@
 ```
 
   </section>
+  <!-- LETTER -->
+
+<section id="letter" class="letter-section hidden">
+
+  <div class="letter-container">
+
+    <div class="letter-top">
+      <span>💌</span>
+      <p>A LETTER FOR YOU</p>
+    </div>
+
+    <h2>Our Little Letter ❤️</h2>
+
+    <p class="letter-intro">
+      Some things are easier to write than to say...
+    </p>
+
+    <button onclick="openLetter()" class="letter-button">
+      Open My Letter 💌
+    </button>
+
+    <div id="letter-content" class="letter-paper">
+
+      <div class="paper-decoration">♡</div>
+
+      <p class="letter-greeting">
+        Dear Devu, ❤️
+      </p>
+
+      <p>
+        <!-- PARAGRAPH 1 -->
+        Write your first paragraph here...
+      </p>
+
+      <p>
+        <!-- PARAGRAPH 2 -->
+        Write your second paragraph here...
+      </p>
+
+      <p>
+        <!-- PARAGRAPH 3 -->
+        Write your third paragraph here...
+      </p>
+
+      <p>
+        <!-- PARAGRAPH 4 -->
+        Write your final paragraph here...
+      </p>
+
+      <p class="letter-ending">
+        With lots of memories and a little piece of my heart,<br>
+        Adhi ❤️
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
 
   <!-- FOOTER -->
 
@@ -313,7 +375,15 @@ function finalMessage() {
     "Whatever comes next,Stay HAPPY❤️";
 
 }
+function openLetter() {
 
+    document.getElementById("letter-content").style.display = "block";
+
+    document.getElementById("letter-content").scrollIntoView({
+        behavior: "smooth"
+    });
+
+}
 </script>
 
 </body>
