@@ -234,6 +234,9 @@
   <button onclick="document.getElementById('anniversary').classList.remove('hidden'); document.getElementById('anniversary').scrollIntoView({behavior:'smooth'});">
     Our 2 Years ❤️
 </button>
+  <button onclick="document.getElementById('cake').classList.remove('hidden'); document.getElementById('cake').scrollIntoView({behavior:'smooth'});">
+    Let's Celebrate 🎂❤️
+</button>
   <button onclick="document.getElementById('letter').classList.remove('hidden'); document.getElementById('letter').scrollIntoView({behavior:'smooth'});">
     Open Our Letter 💌
 </button>
@@ -280,7 +283,78 @@
     </p>
 
   </div>
+<!-- CAKE CUTTING -->
 
+<section id="cake" class="cake-section hidden">
+
+  <div class="cake-content">
+
+    <p class="section-label">A LITTLE CELEBRATION 🎂</p>
+
+    <h2>Make a Wish, Devu ❤️</h2>
+
+    <p class="cake-subtitle">
+      Because your birthday deserves a little celebration...
+    </p>
+
+    <!-- CAKE -->
+
+    <div class="cake-area">
+
+      <div class="candle">
+        <div class="flame" id="flame">🔥</div>
+      </div>
+
+      <div class="cake">
+        <div class="cake-top">
+          <span>❤️</span>
+          <span>💕</span>
+          <span>❤️</span>
+        </div>
+
+        <div class="cake-layer layer-one"></div>
+        <div class="cake-layer layer-two"></div>
+        <div class="cake-layer layer-three"></div>
+
+        <div class="cake-plate"></div>
+      </div>
+
+    </div>
+
+
+    <!-- ACTION -->
+
+    <button id="wishButton" class="cake-button" onclick="makeWish()">
+      Make a Wish ✨
+    </button>
+
+
+    <button id="cutButton"
+            class="cake-button hidden-button"
+            onclick="cutCake()">
+      Cut the Cake 🎂
+    </button>
+
+
+    <!-- MESSAGE -->
+
+    <div id="cake-message" class="cake-message">
+
+      <h3>Happy Birthday Devu! ❤️</h3>
+
+      <p>
+        Here's to another beautiful year,
+        more laughs, more memories,
+        and many more little moments together. 💕
+      </p>
+
+    </div>
+
+    <div id="confetti"></div>
+
+  </div>
+
+</section>
 </section>
   <!-- LETTER -->
 
@@ -312,23 +386,42 @@
       </p>
 
       <p>
-        <!-- PARAGRAPH 1 -->
-        Write your first paragraph here...
+        Firstly Happy birthday once again.❤️So its been 2 years since we met.And now you are upgraded
+        to 20 from 18.i dont know what to tell.Beacuse you are the person who loves me cares etc etc etc..
+        Thanks for being with me.❤️please hold on this entire life plzz..
+        sathym paranja nthokeyo parayanm enn paranja type chyyan irunne but ipppo onnum kittunilla.
+        pinne oru karyam am sry ee birthday kk nte kayil tharan onnullattoo 😌😭.kayyil oru 10rs
+        mathram ayy poy...nee veendenno paranjaalum vazhak paranjalum kuzhapm ila njan plan chytha onnum
+        nadannilla.Anyways ninak value idaan pollum pattathe gift koode undello ath poore uvve..Ennne 
+        kond kalayathe irunna mathi sookshich vecho.Rare item aa evdeyuym kittilla😅
+      </p>
+      
+      <p>
+        And its been 2 years.Happy Anniverssary namkk..enjoy enjoy thulli chadikkoo.virtual cake murikkaam.
+        enik anniversary gift veenam..so angane 2 yr kadannu pooy naml pala vazhikal pala sahacharygal.
+        ellam vannapozhum nmde bond thudarnne karyathil enik santhosham und.beacuse enik aarum illa 
+        ninnpole...nte life il ninne matty vekkan pattilla aarkkum.ellarum poy annum innum ennum nte koode 
+        nikkan nee ee ullarunn.athpole njnum koode ninn namml munnot poy.pala preshnagalum vannitum
+        nml ellam neerittile athpole ee jounery munnot poonam enne ull prarthana..nmde life il ego varalle
+        by chance poolum.communication kurayathe nookkanam.nmle kuttam and judge chyyan nml mathram mathi.
+        and if any doubts or missunderstanding vannal on the spot nml communicate chythirikkanam.
+        our kaaranveshaalum mindathe irikalle..eni oru 1year nml orumich kaanum😭..athakzinjuum ourmich 
+        poonam enn thanneya ennalum ang parajeya..ulla time orumich enjoy and memories undakkam.
+        orunaal oorkkan ntheelum vende jeevithathil.For me its you.
       </p>
 
       <p>
-        <!-- PARAGRAPH 2 -->
-        Write your second paragraph here...
+     so paranj kazhinjittila time ilathonda unexpected hsp case vann..ellamkondum ariyalo..akappade mindan
+        ullath neeya.ellarum thalli paranjtahum koode nadaniit last konam mariyavarum..ellathinum
+        koode ninnit nmle manasilkathe poyvaark okke ulle nte chuttum.athin ellam veendi nee mathmre ullarun
+        koode..enik neeyum ninak njanum ennath ennum nml undairiknam.orikkalum ittipovande avstha nmk varall.
+        
       </p>
 
       <p>
-        <!-- PARAGRAPH 3 -->
-        Write your third paragraph here...
-      </p>
-
-      <p>
-        <!-- PARAGRAPH 4 -->
-        Write your final paragraph here...
+       appo ithokke thanne koode kaanam ennum.njanum😅Thanks thanks for all devu.virtual hug❤️.
+        oru kraym paraytte.its just 30 min remaining for MY GIRLS BIRTHDAY..ithinte peeril nale vazhk 
+        kekkan njn ready aahn.😅
       </p>
 
       <p class="letter-ending">
@@ -423,6 +516,68 @@ function openLetter() {
     document.getElementById("letter-content").scrollIntoView({
         behavior: "smooth"
     });
+
+}
+  function makeWish() {
+
+    document.getElementById("flame").style.display = "none";
+
+    document.getElementById("wishButton").style.display = "none";
+
+    document.getElementById("cutButton").style.display = "inline-block";
+
+    document.getElementById("cake-message").style.display = "block";
+
+}
+
+
+function cutCake() {
+
+    const cake = document.querySelector(".cake");
+
+    cake.style.animation = "cakeCut 0.8s ease";
+
+    createConfetti();
+
+    document.getElementById("cutButton").style.display = "none";
+
+    document.getElementById("cake-message").innerHTML = `
+        <h3>🎂 HAPPY BIRTHDAY DEVU ❤️</h3>
+
+        <p>
+            Cake cut aayeee! 😭❤️<br>
+            Here's to more laughs, more memories,
+            more “ADI AND VAZHAKK” moments,
+            and another beautiful year of your life. 💕
+        </p>
+    `;
+
+}
+function createConfetti() {
+
+    const container = document.getElementById("confetti");
+
+    for (let i = 0; i < 80; i++) {
+
+        const piece = document.createElement("div");
+
+        piece.classList.add("confetti-piece");
+
+        piece.style.left = Math.random() * 100 + "vw";
+
+        piece.style.animationDelay =
+            Math.random() * 1.5 + "s";
+
+        piece.style.transform =
+            "rotate(" + Math.random() * 360 + "deg)";
+
+        container.appendChild(piece);
+
+        setTimeout(() => {
+            piece.remove();
+        }, 4000);
+
+    }
 
 }
 </script>
