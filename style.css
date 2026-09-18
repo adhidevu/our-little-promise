@@ -835,3 +835,278 @@ padding: 13px 24px;
     }
 
 }
+/* =========================
+   CAKE CUTTING
+========================= */
+
+.cake-section {
+    min-height: 100vh;
+    padding: 90px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.cake-content {
+    width: 100%;
+    max-width: 700px;
+    position: relative;
+}
+
+.cake-content h2 {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    margin: 10px 0;
+}
+
+.cake-subtitle {
+    opacity: 0.75;
+    margin-bottom: 50px;
+}
+
+
+/* CAKE AREA */
+
+.cake-area {
+    position: relative;
+    width: 330px;
+    height: 300px;
+    margin: auto;
+}
+
+
+/* CANDLE */
+
+.candle {
+    position: absolute;
+    z-index: 5;
+    left: 50%;
+    top: 5px;
+    transform: translateX(-50%);
+
+    width: 18px;
+    height: 65px;
+
+    border-radius: 5px;
+    background: repeating-linear-gradient(
+        45deg,
+        #ffffff,
+        #ffffff 8px,
+        #e8a5b3 8px,
+        #e8a5b3 16px
+    );
+}
+
+.flame {
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-size: 35px;
+
+    animation: flameDance 0.8s ease-in-out infinite alternate;
+}
+
+
+/* CAKE */
+
+.cake {
+    position: absolute;
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 250px;
+}
+
+.cake-top {
+    height: 45px;
+
+    border-radius: 50% 50% 10px 10px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    font-size: 20px;
+
+    position: relative;
+    z-index: 3;
+}
+
+.cake-layer {
+    width: 250px;
+    margin: auto;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 5px 8px rgba(0,0,0,0.12);
+}
+
+.layer-one {
+    height: 55px;
+}
+
+.layer-two {
+    height: 55px;
+    width: 230px;
+}
+
+.layer-three {
+    height: 50px;
+    width: 210px;
+}
+
+
+/* PLATE */
+
+.cake-plate {
+    width: 290px;
+    height: 20px;
+
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    border-radius: 50%;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
+
+/* BUTTON */
+
+.cake-button {
+    border: none;
+    padding: 15px 30px;
+    margin: 15px 8px;
+
+    border-radius: 30px;
+
+    font-size: 16px;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.cake-button:hover {
+    transform: translateY(-4px) scale(1.03);
+}
+
+.hidden-button {
+    display: none;
+}
+
+
+/* MESSAGE */
+
+.cake-message {
+    display: none;
+
+    margin: 35px auto 0;
+    max-width: 550px;
+
+    animation: cakeMessage 1s ease forwards;
+}
+
+.cake-message h3 {
+    font-family: Georgia, serif;
+    font-size: 28px;
+}
+
+.cake-message p {
+    line-height: 1.8;
+}
+
+
+/* ANIMATIONS */
+
+@keyframes flameDance {
+
+    from {
+        transform: translateX(-50%) scale(1) rotate(-4deg);
+    }
+
+    to {
+        transform: translateX(-50%) scale(1.15) rotate(4deg);
+    }
+
+}
+
+@keyframes cakeMessage {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes cakeCut {
+
+    0% {
+        transform: translateX(-50%) rotate(0);
+    }
+
+    40% {
+        transform: translateX(-50%) rotate(-5deg);
+    }
+
+    100% {
+        transform: translateX(-50%) rotate(0);
+    }
+
+}
+
+
+/* CONFETTI */
+
+.confetti-piece {
+    position: fixed;
+
+    width: 8px;
+    height: 14px;
+
+    top: -20px;
+
+    animation: confettiFall 3s linear forwards;
+}
+
+@keyframes confettiFall {
+
+    0% {
+        transform: translateY(0) rotate(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .cake-content h2 {
+        font-size: 32px;
+    }
+
+    .cake-area {
+        transform: scale(0.85);
+        margin: -10px auto;
+    }
+
+}
